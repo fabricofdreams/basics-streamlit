@@ -26,6 +26,10 @@ data = load_data(10000)
 # Notify the reader that the data was successfully loaded.
 data_load_state.text("Done! (using st.cache_data)")
 
+# Show raw data
+if st.checkbox('Show raw data'):
+    st.subheader('Raw data')
+    st.write(data)
 
 # Histrogram
 st.subheader('Number of pickups by hour')
